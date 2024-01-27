@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+   <!-- routing the javascript file here, -->
+    <script src="script.js"></script>
+
+    <!-- HTML codes:,,, -->
+    <div class="navbar">
+        <h1>BOOKSKY</h1>
+    
+    </div>
+
+    <div class="container">
+        <div class="book-container">
+            <h1>The Great Gatsby </h1>
+           
+            <h5>by F. Scott Fitzgerald</h5>
+            <p>
+                In arguably one of the best novels ever written, Nick Carraway moves to West Egg, New York and lives next to wealthy and mysterious Jay Gatsby. Gatsby throws wild parties, building his reputation as he pines for his lost love. This is a story of intrigue, obsession, and deceit, set against the extravagance of America’s Jazz Age. Sean Astin (best known as Samwise from The Lord of the Rings film series) narrates.
+            </p>
+
+            <button onclick="deletebook(event)">Delete</button>
+
+        </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+    <h3>Add Book</h3>
+    <form>
+        <input type="text" placeholder="Book Title," id="book-title-input">
+        <input type="text" placeholder="Book Author," id="book-author-input">
+        <textarea placeholder ="Short Description," id="book-discription-input"></textarea> 
+        <button id="add-book">ADD</button>
+        <button id="cancel-popup">Cancel</button>
+
+    </form>
+</div>
+
+<button class="add-button" id="add-popup-button">+</button>
+<!-- <button class="plus-button plus-button--large"></button> -->
+
+
+
+<script>
+function deletebook(event){
+event.target.parentElement.remove()
+}
+</script>
+
+</body>
+</html>
